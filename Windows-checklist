@@ -1,0 +1,223 @@
+✅ 1. Check Server Manager Dashboard (Core Health Overview)
+Steps:
+
+Open Server Manager
+
+Look at the Dashboard
+
+Check the following tiles:
+
+Local Server – Errors, warnings, NIC issues
+
+All Servers – Red/Yellow alerts
+
+Services – Any failed or stopped services
+
+Event Viewer Summary – Critical / Error logs
+
+Roles & Features – Check status
+
+Why it's useful:
+
+✔ Shows overall system health
+✔ Displays service failures
+✔ Shows storage, NIC, firewall, and role issues
+
+✅ 2. Event Viewer (GUI Monitoring)
+Steps:
+
+Start → search Event Viewer
+
+Check these critical logs:
+
+Windows Logs → System
+
+Windows Logs → Application
+
+Windows Logs → Security
+
+Applications and Services Logs → HardwareEvents
+
+Look for:
+
+🟥 Critical
+🟧 Errors
+🟨 Warnings
+
+Why it’s useful:
+
+✔ Shows hardware failures, driver issues, app crashes, service failures.
+
+✅ 3. Resource Monitor (CPU, Disk, Network, Memory Health)
+Steps:
+
+Start → search Resource Monitor
+
+Check tabs:
+
+CPU – High usage, stuck processes
+
+Memory – Free/Standby/Used
+
+Disk – High read/write, queues
+
+Network – Latency, dropped packets
+
+Why it’s useful:
+
+✔ Detects if server is slow due to resource congestion.
+
+✅ 4. Task Manager (Real-Time Health)
+Steps:
+
+Ctrl + Shift + Esc → Task Manager
+
+Go to Performance tab
+
+Look at:
+
+CPU usage
+
+Memory consumption
+
+Disk usage
+
+Network throughput
+
+Uptime
+
+Why:
+
+✔ Quick performance snapshot
+✔ Great for diagnosing high usage.
+
+✅ 5. Services.msc (Check for Failed Critical Services)
+Steps:
+
+Run → services.msc
+
+Sort by:
+
+Status
+
+Startup Type
+
+Check if the following services are running:
+
+Windows Update
+
+DNS Server (if applicable)
+
+DHCP Server (if used)
+
+Active Directory services (if domain controller)
+
+SQL Server (if hosting DB)
+
+Why:
+
+✔ Ensures core services are healthy.
+
+✅ 6. Disk Management (Check Disk Health & Space)
+Steps:
+
+Run → diskmgmt.msc
+
+Check:
+
+Disk status (Healthy / Failed / Degraded)
+
+Free space
+
+RAID volumes
+
+Disk type (Basic / Dynamic)
+
+Why:
+
+✔ Confirms storage health visually.
+
+✅ 7. Reliability Monitor (Hidden but Powerful GUI Tool)
+Steps:
+
+Start → search Reliability Monitor
+(Or run: perfmon /rel)
+
+Look at graph of:
+
+System errors
+
+App crashes
+
+Windows failures
+
+Hardware issues
+
+Why:
+
+✔ Shows daily stability index
+✔ Great for spotting failing apps/drivers.
+
+✅ 8. Performance Monitor (Detailed Monitoring)
+Steps:
+
+Start → Performance Monitor
+
+Add counters like:
+
+Processor → % Processor Time
+
+Memory → Available MBytes
+
+Disk → Avg Disk Queue Length
+
+Network → Packets Received Errors
+
+Why:
+
+✔ Best for long-term performance diagnosis.
+
+✅ 9. Check Windows Update Status
+Steps:
+
+Settings → Windows Update
+
+Ensure:
+
+Updates succeeded
+
+No failed updates
+
+Last update date is recent
+
+Why:
+
+✔ Outdated servers often become unstable or vulnerable.
+
+✅ 10. Device Manager (Hardware Issues)
+Steps:
+
+Run → devmgmt.msc
+
+Look for:
+
+Yellow triangle warnings
+
+Missing drivers
+
+Failing devices
+
+Why:
+
+✔ Checks hardware & driver health.
+
+🎯 Quick GUI Health Checklist (Best for Daily Use)
+Check                               	    Tool                       What to look for
+Overall health	                      Server Manager	              Red/Yellow alerts
+Errors & crashes	                    Event Viewer	                 Critical, Errors
+Performance	                           Task Manager	                 High CPU/RAM/Disk
+Disk health	                         Disk Management	               “Healthy” status
+Services	                            Services.msc	              Failed/stopped services
+Network	                            Resource Monitor                  high latency/drops
+Stability	                          Reliability Monitor	            Low stability index
+Drivers	                              Device Manager	                Warning triangles
