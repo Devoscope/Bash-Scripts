@@ -92,6 +92,13 @@ ChallengeResponseAuthentication yes
 UsePAM yes
 ```
 
+For New Ubuntu versions ChallengeResponseAuthentication is not available:
+
+```
+KbdInteractiveAuthentication yes
+UsePAM yes
+```
+
 Then restart SSH:
 
 ```bash
